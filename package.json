@@ -3,8 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port=4800",
-    "build": "ng build",
+    "start": "ng serve --configuration=local --port=4800",
+    "start:local": "ng serve --configuration=local --port=4800",
+    "start:dev": "ng serve --configuration=development --port=4800",
+    "start:prod": "ng serve --configuration=production --port=4800",
+    "build:local": "ng build --configuration=local",
+    "build:dev": "ng build --prod --configuration=development",
+    "build:prod": "ng build --prod --configuration=production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

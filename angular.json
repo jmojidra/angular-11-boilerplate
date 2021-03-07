@@ -36,6 +36,42 @@
             "scripts": []
           },
           "configurations": {
+            "local": {
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ]
+            },
+            "development": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -71,6 +107,12 @@
             "browserTarget": "angular-boilerplate:build"
           },
           "configurations": {
+            "local": {
+              "browserTarget": "vorbis-console:build:local"
+            },
+            "development": {
+              "browserTarget": "angular-boilerplate:build:development"
+            },
             "production": {
               "browserTarget": "angular-boilerplate:build:production"
             }
@@ -119,6 +161,9 @@
             "devServerTarget": "angular-boilerplate:serve"
           },
           "configurations": {
+            "development": {
+              "devServerTarget": "angular-boilerplate:serve:development"
+            },
             "production": {
               "devServerTarget": "angular-boilerplate:serve:production"
             }

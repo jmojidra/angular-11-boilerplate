@@ -1,27 +1,40 @@
-# AngularBoilerplate
+# Angular-11 Boilerplate
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
-## Development server
+## Go to project folder and install dependencies
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+npm install
 
-## Code scaffolding
+## Launch development server, and open localhost:4800 in your browser
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+npm start
 
-## Build
+## Project structure
+dist/                        compiled version
+e2e/                         end-to-end tests
+src/                         project source code
+|- app/                      app components
+|  |- core/                  core module (singleton services and single-use components)
+|  |- shared/                shared module  (common components, directives and pipes)
+|  |- app.component.*        app root component (shell)
+|  |- app.module.ts          app root module definition
+|  |- app.routing.ts         app routes
+|  +- ...                    additional modules and components
+|- assets/                   app assets (images, fonts, sounds...)
+|- environments/             values for various build environments
+|- index.html                html entry point
+|- styles.css                global style entry point
+|- main.ts                   app entry point
+|- polyfills.ts              polyfills needed by Angular
++- test.ts                   unit tests entry point
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Project NPM script
 
-## Running unit tests
+Tasks	                        Description
+npm start	                    Run development server on http://localhost:4800/
+npm run build:dev	            Lint code and build app for development env in dist/ folder
+npm run build:prod	            Lint code and build app for production env in dist/ folder
+npm run build:local	            Lint code and build app for local env in dist/ folder
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
