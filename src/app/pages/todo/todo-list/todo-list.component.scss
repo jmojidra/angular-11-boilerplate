@@ -1,0 +1,48 @@
+.header-constainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  .action {
+    .primary-btn {
+      background-color: #4caf50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  }
+}
+
+#todo-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#todo-table td,
+#todo-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#todo-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#todo-table tr:hover {
+  background-color: #ddd;
+}
+
+#todo-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}

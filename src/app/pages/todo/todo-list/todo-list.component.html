@@ -1,0 +1,43 @@
+<div>
+    <div class="header-constainer">
+        <div>
+            <h1> Todo List</h1>
+        </div>
+        <div class="action">
+            <button [routerLink]="['/todo/new']" class="primary-btn">Add Todo</button>
+        </div>
+    </div>
+    <div class="body-conatiner">
+        <div class="table-container">
+            <table id="todo-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Write books</td>
+                        <td>10/02/2020</td>
+                        <td>Active</td>
+                        <td class="action-conatiner">
+                            <a>
+                                <span class="material-icons">
+                                    mode_edit
+                                </span>
+                            </a>
+                            <a>
+                                <span class="material-icons">
+                                    delete
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" placeholder="Task name..">
+
+        <label for="lname">Date</label>
+        <input type="date" id="lname" name="date">
+
+        <label for="status">Status</label>
+        <select id="status" name="status">
+            <option value="active">Active</option>
+            <option value="inactive">In Active</option>
+        </select>
+        <button type="button" [routerLink]="['/todo']" >Submit</button>
+    </form>
+</div>
